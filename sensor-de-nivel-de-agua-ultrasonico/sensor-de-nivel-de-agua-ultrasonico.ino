@@ -52,14 +52,17 @@ uint32_t lastm = 0;
 
 // funcion de setup de arduino
 void setup() {
-  // Iniciar el puerto serie
+  // iniciar el puerto serie
   Serial.begin(115200);
 
   // mostrar mensaje inicial
   Serial.println(F("----------------------------------------------------"));
-  Serial.println(F("    EJEMPLO SENSOR DE HUMEDAD DHT11 CON ARDUINO     "));
+  Serial.println(F("   PROYECTO DE SENSOR DE NIVEL DE AGUA CON ARDUINO  "));
   Serial.println(F("            https://www.geekfactory.mx              "));
   Serial.println(F("----------------------------------------------------"));
+
+  // iniciar el sensor ultrasónico
+  sonar.begin();
 
   // iniciar pantalla LCD
   lcd.begin(16, 2);
